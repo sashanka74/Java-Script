@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Buttons</title>
+  <style>
+    body {
+      text-align: start;
+      padding: 50px;
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 20px 20px;
+      font-size: 10px;
+      margin: 30px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .red-btn { background-color: red; color: white; }
+    .blue-btn { background-color: blue; color: white; }
+  </style>
+</head>
+<body>
+  <button class="white" onclick="changeColor('Red')">Red</button>
+  <button class="white" onclick="changeColor('Blue')">Blue</button>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
