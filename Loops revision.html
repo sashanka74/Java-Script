@@ -1,0 +1,828 @@
+<!-- // 1st question
+
+// let products = ["Laptop", "Mobile", "Camera", "Shoes", "Earphones"];
+
+// let output = "<ul type = disc>";
+// for (let i = 0; i < products.length; i++) {
+//   output += "<li>" + products[i] + "</li>";
+// }
+// output += "</ul>";
+// document.body.innerHTML = output
+
+2nd question:-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discount Table</title>
+</head>
+<body>
+  <h2>Discount Table</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Original Price</th>
+      <th>10% Discounted Price</th>
+    </tr>
+    <tbody id="priceTable"></tbody>
+  </table>
+
+  <script>
+    let prices = [1000, 2000, 3000, 1500];
+    let table = "";
+
+    for (let i = 0; i < prices.length; i++) {
+      let discounted = prices[i] - (prices[i] * 0.10);
+      table += "<tr><td>" + prices[i] + "</td><td>" + discounted + "</td></tr>";
+    }
+
+    document.getElementById("priceTable").innerHTML = table;
+  </script>
+</body>
+</html>
+
+3rd question
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        div { 
+            width: 200px; 
+            height: 200px; 
+            border: solid 2px black; 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+    <div id="productcontainer"> 
+ 
+    </div> 
+    <script> 
+        let productcontainer = document.getElementById("productcontainer") 
+        let products = [ 
+            { name: "Shirt", price: 500, category: "Clothing" }, 
+            { name: "Watch", price: 1200, category: "Accessories" } 
+        ]; 
+ 
+        for (let i = 0; i < products.length; i++) { 
+            productcontainer.innerHTML += `<div> 
+                <h2> ${products[i].name} </h2> 
+                <p> price: ${products[i].price}<p> 
+                <p>category: ${products[i].category}`; 
+        } 
+ 
+    </script> 
+</body> 
+ 
+</html>
+
+4th question
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ 
+<body> 
+    <table border="2"> 
+        <thead> 
+            <tr> 
+                <td>S.no</td> 
+                <td>product</td> 
+                <td>Quantity</td> 
+                <td>price</td> 
+                <td>Total</td> 
+            </tr> 
+        </thead> 
+        <tbody id="data"> 
+ 
+        </tbody> 
+    </table> 
+ 
+    <script> 
+        let data = document.getElementById("data"); 
+        let array = [ 
+            { product: "moblie", quantity: "6", price: "8000" }, 
+            { product: "moblie", quantity: "5", price: "7000" }, 
+            { product: "moblie", quantity: "4", price: "6000" }, 
+            { product: "moblie", quantity: "3", price: "5000" }, 
+            { product: "moblie", quantity: "2", price: "4000" }, 
+            { product: "moblie", quantity: "1", price: "3000" }, 
+        ] 
+        for (let i = 0; i < array.length; i++) { 
+            data.innerHTML += `<tr><td> ${i + 1}</td>  
+            <td>${array[i].product}</td>  
+            <td>${array[i].quantity}</td>  
+            <td> ${array[i].price}</td> 
+            <td> ${array[i].quantity * array[i].price}</tr>`; 
+        } 
+    </script> 
+</body> 
+</html> -->
+
+<!-- 5th question
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+     
+    <div id="data"> 
+ 
+    </div> 
+    <script> 
+        let data = document.getElementById("data"); 
+        let array=[ 
+           { name: "Keyboard", stock: 3 }, 
+           { name: "Mouse", stock: 0 }, 
+           { name: "Charger", stock: 2 } 
+        ]; 
+        for(let i=0;i<array.length;i++){ 
+            if(array[i].stock > 0){ 
+                data.innerHTML += `<h1> ${array[i].name}</h1>`; 
+            } 
+        } 
+    </script> 
+</body> 
+</html> --> 
+
+<!-- 6th question
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="countdown"></div> 
+ 
+    <script> 
+        let countdown= document.getElementById("countdown"); 
+        let x=10; 
+        while(x>0){ 
+            countdown.innerHTML += `<h6> ${x}</h6>`; 
+            x--; 
+        } 
+    </script> 
+</body> 
+</html>  -->
+
+<!-- 7th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+    <div id="product"> 
+    </div> 
+    <script> 
+        let product = document.getElementById("product"); 
+        let array = ["mobile", "laptop", "watch", "camera", "tab"]; 
+        for (let i = 0; i < array.length; i++) { 
+            if (array[i] == "camera") { 
+                product.innerHTML += `<h5>${array[i]}</h5>`; 
+                break; 
+            } 
+            else 
+                product.innerHTML += `<h5>${array[i]}</h5>`; 
+        } 
+    </script> 
+</body> 
+ </html> -->
+
+ <!-- 8th question -->
+
+ <!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+    <div id="cart"></div> 
+    <script> 
+        let cart = document.getElementById("cart"); 
+        let array = [499, 299, 1299, 999]; 
+        let i = 0, total = 0; 
+        let size = array.length; 
+        while (i < size) { 
+            total += array[i]; 
+            i++; 
+        } 
+        cart.innerHTML += `<h3>total: ${total} </h3>`; 
+    </script> 
+</body> 
+ </html> -->
+
+<!-- 9th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="data"></div> 
+ 
+    <script> 
+        let product = document.getElementById("data"); 
+        let array = [ 
+            { name: "Keyboard", stock: 3 }, 
+            { name: "Mouse", stock: 9 }, 
+            { name: "Charger", stock: 2 }, 
+            { name: "Keyboard", stock: 3 }, 
+            { name: "Mouse", stock: 0 }, 
+            { name: "Charger", stock: 2 } 
+        ]; 
+        let i = 0; 
+        while (array[i].stock) { 
+            product.innerHTML += `<h2> Product Name: ${array[i].name}</h2>`; 
+            i++; 
+        } 
+    </script> 
+</body> 
+ </html> -->
+
+<!-- 10th question  -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+ 
+    <div id="product"></div> 
+    <script> 
+        let product = document.getElementById("product"); 
+        let array = [ 
+            { name: "Keyboard", stock: 3 }, 
+            { name: "Mouse", stock: 9 }, 
+            { name: "Charger", stock: 2 }, 
+            { name: "mobile", stock: 3 }, 
+            { name: "buds", stock: 9 }, 
+            { name: "tab", stock: 2 }, 
+        ]; 
+        for (let i = 0; i < 3; i++) { 
+            product.innerHTML += `<ul> <li>${array[i].name}</li> </ul>`; 
+        } 
+    </script> 
+</body> 
+</html>
+
+11th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ 
+<body> 
+    <div id="cart"> 
+ 
+    </div> 
+    <script> 
+        let cart = document.getElementById("cart"); 
+        let item = 5 
+        let items = []; 
+        while (item > 0) { 
+            let user_input = prompt("Enter items:"); 
+            items.push(user_input); 
+            item--; 
+        } 
+        for (let i = 0; i < items.length; i++) 
+            cart.innerHTML += `<ol><li>${items[i]}</li></ol>`; 
+    </script> 
+</body> 
+ 
+</html> --> 
+
+<!-- 12th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="cart"></div> 
+ 
+    <script> 
+        let cart = document.getElementById("cart"); 
+        let items = [];//user add items in the cart 
+        let size = cart.length; 
+        do { 
+            cart.innerText += `cart is empty`; 
+            size--; 
+        } while (size > 0); 
+        if (size) 
+            cart.innerHTML += `<h6>Cart have this many items; ${size} </h6>`; 
+        else 
+            cart.innerHTML += `<h4> Add items to cart</h6>`; 
+    </script> 
+</body> 
+ </html> -->
+
+<!-- 13th question  -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+    <div id="product"></div> 
+ 
+    <script> 
+        let product = document.getElementById("product"); 
+        let price = [2000, 3000, 4000, 5000]; 
+        let i = 0 
+        do { 
+            product.innerHTML += `<p>Original Price ${price[i]} after 20% discount ${price[i] * 0.80}</p>`; 
+            i++; 
+        } while (i < price.length); 
+    </script> 
+</body> 
+</html> -->
+
+<!-- 14th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+ 
+    <div id="item"></div> 
+    <script> 
+        let item = document.getElementById("item"); 
+        let items = ["mobile", "laptop", "TV", "Charger"]; 
+        let i = 0; 
+        do { 
+            item.innerHTML += `<b>${items[i]} <br></b> `; 
+            i++; 
+        } while (i < items.length); 
+    </script> 
+</body> 
+</html> -->
+
+<!-- 15th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="stock"></div> 
+    <script> 
+        let stock = document.getElementById("stock"); 
+        let products = [ 
+            { name: "Keyboard", stock: 3 }, 
+            { name: "Mouse", stock: 9 }, 
+            { name: "Charger", stock: 2 }, 
+            { name: "mobile", stock: 0 }, 
+            { name: "buds", stock: 9 }, 
+            { name: "tab", stock: 2 }, 
+        ]; 
+        let i = 0, c = 0; 
+        while (products[i].stock) { 
+            c++; 
+            i++; 
+        } 
+        stock.innerHTML += `<b>added products ${c}</b>`; 
+    </script> 
+</body> 
+ 
+</html> -->
+
+<!-- 16th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ 
+<body> 
+    <div id="product"></div> 
+    <script> 
+        let product = document.getElementById("product"); 
+        let categories = [ 
+            { name: "Mobiles", items: ["iPhone", "OnePlus", "Samsung"] }, 
+            { name: "Laptops", items: ["HP", "Dell", "Asus"] } 
+        ]; 
+        for (let i = 0; i < categories.length; i++) { 
+            product.innerHTML += `<h4> ${categories[i].name} </h4>`; 
+            for (let j = 0; j < 3; j++) { 
+                product.innerHTML += `<h4> ${categories[j].items}</h4>`; 
+            } 
+        } 
+    </script> 
+</body> 
+ 
+</html> -->
+
+<!-- 17th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<center>
+<body> 
+    <table border="2"> 
+        <thead> 
+            <tr> 
+                <td>product</td> 
+                <td>Quantity</td> 
+                <td>price</td> 
+                <td>Total</td> 
+            </tr> 
+        </thead> 
+        <tbody id="data"> 
+ 
+        </tbody> 
+    </table> 
+    <script> 
+     let data=document.getElementById("data"); 
+     let array =[ 
+        {product:"moblie",quantity:"6",price:"16000"}, 
+        {product:"TV",quantity:"3",price:"34000"}, 
+        {product:"Mouse",quantity:"9",price:"800"}, 
+        {product:"Tab",quantity:"1",price:"8200"}, 
+        {product:"laptop",quantity:"10",price:"41000"}, 
+        {product:"moblie",quantity:"4",price:"30000"}, 
+     ] 
+     for(let i=0;i<array.length;i++){ 
+        data.innerHTML += ` <td>${array[i].product}</td>  
+            <td>${array[i].quantity}</td>  
+            <td> ${array[i].price}</td> 
+            <td> ${array[i].quantity * array[i].price}</tr>`; 
+     } 
+    </script> 
+</body> 
+</center>
+</html> -->
+
+<!-- 18th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="cart"></div> 
+    <script> 
+        let cart =document.getElementById("cart"); 
+        let prodcutPrice=[200,300,400,500,600]; 
+        let i=0,totalCartPrice=0,userPrice=1000; 
+        while(i < prodcutPrice.length){ 
+          totalCartPrice += prodcutPrice[i]; 
+          i++; 
+        } 
+        if(totalCartPrice <= userPrice) 
+          cart.innerHTML += `within Budget`; 
+        else 
+          cart.innerHTML +=`Budget Exceeded`; 
+    </script> 
+</body> 
+</html> -->
+
+<!-- 19th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+ 
+    <h1>products grouped by category</h1> 
+    <div id="clothing"> 
+        <h4>Clothing</h4> 
+    </div> 
+    <div id="electronics"> 
+        <h4>Electronics</h4> 
+    </div> 
+    <div id="accessories"> 
+        <h4>Accessories</h4> 
+    </div> 
+    <script> 
+        let clothing = document.getElementById("clothing"); 
+        let electronics = document.getElementById("electronics"); 
+        let accessories = document.getElementById("accessories"); 
+        let products = [ 
+            { name: "Shirt", price: 500, category: "Clothing" }, 
+            { name: "Jeans", price: 800, category: "Clothing" }, 
+            { name: "Watch", price: 1200, category: "Accessories" }, 
+            { name: "Belt", price: 300, category: "Accessories" }, 
+            { name: "Headphones", price: 1500, category: "Electronics" }, 
+            { name: "Mobile", price: 15000, category: "Electronics" } 
+        ]; 
+ 
+        for (let i = 0; i < products.length; i++) { 
+            if (products[i].category == "Clothing") 
+                clothing.innerHTML += `<ul>${products[i].name}</ul>`; 
+            else if (products[i].category == "Accessories") 
+                accessories.innerHTML += `<ul> ${products[i].name}</ul>`; 
+            else 
+                electronics.innerHTML += `<ul> ${products[i].name}</ul>`; 
+        } 
+ </script> 
+</body> 
+</html> -->
+
+<!-- 20th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Document</title> 
+</head> 
+<center>
+<body> 
+    <table border="2"> 
+        <thead> 
+            <tr> 
+                <td>product</td> 
+                <td>Price</td> 
+                <td>GST</td> 
+                <td>Final price</td> 
+            </tr> 
+        </thead> 
+        <tbody id="data"> 
+ 
+        </tbody> 
+    </table> 
+    <script> 
+        let data = document.getElementById("data"); 
+        let array = [ 
+            { product: "moblie", price: 8000 }, 
+            { product: "tv", price: 4500 }, 
+            { product: "tab", price: 400 }, 
+            { product: "charger", price: 100 }, 
+            { product: "laptop", price: 9000 }, 
+            { product: "watch", price: 600 }, 
+        ] 
+        for (let i = 0; i < array.length; i++) { 
+            let gst = parseInt(array[i].price - array[i].price * 0.82); 
+            let finalPrice = array[i].price + gst; 
+            data.innerHTML += `<tr> 
+            <td>${array[i].product}</td>   
+            <td> ${array[i].price}</td> 
+            <td>${gst}</td> 
+            <td> ${finalPrice}</td></tr>`; 
+        } 
+    </script> 
+</body> 
+</center>
+</html>
+
+<!-- 21st question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h1>Products in reverse order</h1> 
+    <div id="products"></div> 
+ 
+    <script> 
+        let product = document.getElementById("products"); 
+        let products = ["mobile", "Tv", "watch", "laptop", "Mouse"]; 
+        for (let i = products.length; i > 0; i--) { 
+            product.innerHTML += `<h4>${products[i - 1]}</h4>`; 
+        } 
+    </script> 
+</body> 
+ </html> --> 
+
+<!-- 22nd question  -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+ <body> 
+    <div id="product"></div> 
+    <script> 
+        let Products = document.getElementById("product"); 
+        let prodcuts = [ 
+            { product: "moblie", price: "8000" }, 
+            { product: "tv", price: "4500" }, 
+            { product: "tab", price: "400" }, 
+            { product: "charger", price: "100" }, 
+            { product: "laptop", price: "9000" }, 
+            { product: "watch", price: "600" }, 
+        ]; 
+        let max = 0; 
+        max = prodcuts[0].price; 
+        for (let i = 0; i < prodcuts.length; i++) { 
+            if (prodcuts[i].price > max) 
+                max = prodcuts[i].price; 
+        } 
+ 
+        for (let i = 0; i < prodcuts.length; i++) { 
+            if (max == prodcuts[i].price) 
+                product.innerHTML += `<h3>higest price product </h3> <h4> ${prodcuts[i].product}</h4>` 
+        } 
+    </script> 
+</body> 
+ </html> -->
+
+ <!-- 23rd question -->
+
+ <!-- <!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <div id="product"></div> 
+ 
+    <script> 
+        let product = document.getElementById("product"); 
+        let prodcuts = [ 
+            { product: "moblie", price: 8000 }, 
+            { product: "tv", price: 45000 }, 
+            { product: "tab", price: 45000 }, 
+            { product: "charger", price: 1000 }, 
+            { product: "laptop", price: 92000 }, 
+            { product: "watch", price: 6500 }, 
+        ]; 
+        let average = 0, total = 0; 
+        for (let i = 0; i < prodcuts.length; i++) { 
+            total += prodcuts[i].price; 
+        } 
+        average = parseInt(total / prodcuts.length); 
+        product.innerHTML += `<p>average of all products is${average}</p>`; 
+    </script> 
+</body> 
+</html>  -->
+
+<!-- 24th question -->
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <table border="2"> 
+        <thead> 
+            <tr> 
+                <td colspan="4"> Cart </td> 
+            </tr> 
+        </thead> 
+        <tbody id="product"> 
+ 
+        </tbody> 
+    </table> 
+    <script> 
+        let product = document.getElementById("product"); 
+        let prodcuts = [ 
+            { product: "moblie", price: 8000, quantity: 6 }, 
+            { product: "tv", price: 4500, quantity: 4 }, 
+            { product: "tab", price: 400, quantity: 3 }, 
+            { product: "charger", price: 100, quantity: 1 }, 
+            { product: "laptop", price: 9000, quantity: 6 }, 
+            { product: "watch", price: 600, quantity: 3 }, 
+        ]; 
+        for (let i = 0; i < prodcuts.length; i++) { 
+            let cartvalue = prodcuts[i].price * prodcuts[i].quantity; 
+            let str = ""; 
+            if (cartvalue > 5000) 
+                str += "free delivery"; 
+            else 
+                str += "free delivery not applicable"; 
+ 
+            product.innerHTML += ` 
+        <tr><td> ${prodcuts[i].product}</td> 
+        <td> ${prodcuts[i].quantity}</td> 
+        <td> ${cartvalue}</td> 
+        <td>${str}</td></tr>`; 
+ 
+        } 
+    </script> 
+</body> 
+ </html> -->
+
+ <!-- 25th question -->
+
+ <!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+<table border="2"> 
+    <thead> 
+        <tr> 
+            <td> 
+                Clothing Offer 
+            </td> 
+        </tr> 
+    </thead> 
+    <tbody id="clothing"> 
+ 
+    </tbody> 
+</table> 
+ 
+<table border="2"> 
+    <thead> 
+        <tr> 
+            <td colspan="3"> 
+                Electronics 
+            </td> 
+        </tr> 
+    </thead> 
+    <tbody id="electronics"> 
+ 
+    </tbody> 
+</table> 
+    <script> 
+        let clothing = document.getElementById("clothing"); 
+        let electronics = document.getElementById("electronics"); 
+        let products = [ 
+            { name: "Shirt", price: 500, category: "Clothing" }, 
+            { name: "Jeans", price: 800, category: "Clothing" }, 
+            { name: "Headphones", price: 1500, category: "Electronics" }, 
+            { name: "Mobile", price: 15000, category: "Electronics" } 
+        ]; 
+ 
+        for (let i = 0; i < products.length; i++) { 
+            if (products[i].category == "Clothing") 
+                clothing.innerHTML += `<tr><td>${products[i].name}<td>  
+                <td> ${products[i].price}</td> 
+                <td> ${products[i].price * 0.95}</td></tr>`; 
+            else 
+                electronics.innerHTML += `<tr><td>${products[i].name}<td>  
+                <td> ${products[i].price}</td> 
+                <td> ${products[i].price * 0.95}</td></tr>`; 
+        } 
+ 
+    </script> 
+</body> 
+</html> 
