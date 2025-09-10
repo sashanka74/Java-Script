@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Rating System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .star {
+      font-size: 40px;
+      color: goldenrod;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .star:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h2>Click to Rate</h2>
+  <div id="star"></div>
+  <p id="ratingText"></p>
+
+  <script>
+    function createstars(count) {
+      let starContainer = document.getElementById("star");
+      starContainer.innerHTML = "";
+
+      for (let i = 1; i <= count; i++) {
+        let span = document.createElement("span");
+        span.innerHTML = "☆"; // hollow star
+        span.classList.add("star");
+        span.setAttribute("data-index", i);
+
+        // Add click event
+        span.addEventListener("click", function () {
+          setRating(i, count);
+        });
+
+        starContainer.appendChild(span);
+      }
+    }
+
+    function setRating(rating, total) {
+      let stars = document.querySelectorAll(".star");
+      stars.forEach((star, index) => {
+        star.innerHTML = index < rating ? "★" : "☆"; // filled or hollow
+      });
+
+      document.getElementById("ratingText").innerText = 
+        "You rated: " + rating + " / " + total;
+    }
+
+    createstars(5); // create 5 clickable stars
+  </script>
+</body>
+</html>
