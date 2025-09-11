@@ -1,1 +1,35 @@
-All About Dom
+what is DOM ?
+DOM stands for document Object Module
+
+DOM represents all HTML elements in the tree structure format .
+
+Why DOM ?
+dynamically change the content
+add / remove elements
+handle the user intersaction
+
+Types of DOM's 
+their are 4 types of DOM'
+1.DOM Selectors :
+    1.getElementbyID(" ")  : it selects only one element by its id only 
+    2.getElementbyclass("") : it selects only by the class name
+    3.getElementbyTagName("") : it selects only by the TagName
+    4.getElementbyQuerySelector("") : in this queryselector we pass either id,name, if it matches output
+                            will be generated in the way of process which one occur first it generates.
+    5.getElementbyQuerySelectorall("") : it is same queryselector but it selects all
+
+2. DOM Manipulation :
+    1. Create element : it creates the element eg:document.createElement("element eg:div/p/label")
+    2. remote element : it removes the element eg:document.getElementbyID("variable name").remove()
+    3. replace element : it replace the element eg:document.getElementbyID("variable name").replace()
+    
+3. Attribute Manipulation :
+    1.get Attribute():
+    2.set Attribute():
+    3.img.set Attribute():
+    4.has Attribute():
+
+4. Class Manipulation with Classlist :
+    1.add
+    2.remove
+    3.toggle
